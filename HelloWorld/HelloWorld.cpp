@@ -10,6 +10,7 @@ int main() {
 	std::cout << " Enter age: " << std::endl;
 	std::cin >> age;
 
+	//if you dont want to do "endl you can do 
 	cout << age << endl;
 
 	return 0;

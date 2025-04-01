@@ -10,7 +10,7 @@ int main() {
 	std::cout << " Enter age: " << std::endl;
 	std::cin >> age;
 
-	//if you dont want to do "endl you can do 
+	//if you dont want to do "endl" you can do "\n" as long as its in parentheses, I dont have an exampke of this right now
 	cout << age << endl;
 
 	return 0;

@@ -4,10 +4,12 @@
 using namespace std;
 GuessingGame Game{};
 
+void submitGuess();
 
 int main() {
 	Game.guesses = 3;
 	Game.getRandomNumber();
+
 	while (Game.checkForGuesses()) {
 		submitGuess();
 	}
@@ -23,3 +25,4 @@ void submitGuess() {
 		Game.guesses = 0;
 	}
 }
+

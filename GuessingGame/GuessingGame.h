@@ -14,5 +14,5 @@ public:
 private:
 	int randomNumber;
 	int lowerBound;
-	int upperBound
+	int upperBound;
 };

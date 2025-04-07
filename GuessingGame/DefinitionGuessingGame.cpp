@@ -6,10 +6,9 @@
 using namespace std;
 
 void GuessingGame::getRandomNumber() {
-	srand(time(0));
 	cout << "enter a lowerbound: ";
 	cin >> lowerBound;
-	cout << "enter a lowerBound: ";
+	cout << "enter a upperBound: ";
 	cin >> upperBound;
 	if (upperBound < lowerBound) {
 		cout << "Upper bound must be greater than or equal to lower bound.\n";
@@ -47,4 +46,9 @@ string GuessingGame::checkGuess(int guess) {
 
 int GuessingGame::showRandomNumber() {
 	return randomNumber;
+}
+
+void GuessingGame::resetGame() {
+	guesses = 3;
+	getRandomNumber();
 }

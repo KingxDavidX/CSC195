@@ -7,13 +7,20 @@ GuessingGame Game{};
 void submitGuess();
 
 int main() {
-	Game.guesses = 3;
-	Game.getRandomNumber();
+	srand(time(0));
 
-	while (Game.checkForGuesses()) {
-		submitGuess();
+	char playAgain = 'y';
+
+	while (playAgain == 'y' || playAgain == 'Y') {
+		Game.resetGame();
+		while (Game.checkForGuesses()) {
+			submitGuess();
+		}
+	cout << "Play again? (y/n): ";
+	cin >> playAgain;
+	cout << "---------------------------------------\n";
 	}
-
+	cout << "Thanks for playing!\n";
 }
 
 void submitGuess() {

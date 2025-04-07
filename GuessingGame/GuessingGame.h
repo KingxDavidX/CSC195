@@ -9,8 +9,8 @@ public:
 	bool checkForGuesses();
 	void getRandomNumber();
 	int showRandomNumber();
+	void resetGame();
 	int guesses;
-
 private:
 	int randomNumber;
 	int lowerBound;

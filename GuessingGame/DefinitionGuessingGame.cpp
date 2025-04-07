@@ -5,8 +5,12 @@
 
 using namespace std;
 
-void GuessingGame::getRandomNumber(int lowerBound, int upperBound) {
+void GuessingGame::getRandomNumber() {
 	srand(time(0));
+	cout << "enter a lowerbound: ";
+	cin >> lowerBound;
+	cout << "enter a lowerBound: ";
+	cin >> upperBound;
 	int hiddenNumber = rand() % (upperBound-lowerBound) + upperBound;
 	randomNumber = hiddenNumber;
 
@@ -35,4 +39,8 @@ string GuessingGame::checkGuess(int guess) {
 	else {
 		return "Guess incorrect the answer is less than guess and you have " + to_string(guesses) + " left\n";
 	}
+}
+
+int GuessingGame::showRandomNumber() {
+	return randomNumber;
 }

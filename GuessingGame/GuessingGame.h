@@ -7,8 +7,12 @@ class GuessingGame {
 public:
 	string checkGuess(int guess);
 	bool checkForGuesses();
-	void getRandomNumber(int upperBound, int lowerBound);
+	void getRandomNumber();
+	int showRandomNumber();
 	int guesses;
+
 private:
 	int randomNumber;
+	int lowerBound;
+	int upperBound
 };

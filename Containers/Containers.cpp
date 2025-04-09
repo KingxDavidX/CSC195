@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	string fruits[5] = { "Banana", "Kiwi", "Mango", "chikoo", "Strawbarry" };
+	string fruits[5] = { "Banana", "Kiwi", "Mango", "chikoo", "Strawberry" };
 
 	vector<int> numbers;
 	numbers.push_back(1);

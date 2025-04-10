@@ -21,5 +21,30 @@ int main()
 		cout << numbers[i] << endl;
 	}
 
+	cout << "----------------------------------------------------------------------\n";
+
+	// Pointer Arithmetic
+
+	string chemicals[5] = { "mercury", "hydrochloric acid", "chlorine", "bromine", "table salt" };
+
+	cout << chemicals[2] << "\n";
+	cout << chemicals << "\n";	//returns address of first element in the array
+	cout << &chemicals[0] << "\n";
+
+	for (int i = 0; i < (*chemicals).size(); ++i)
+	{
+		cout << &chemicals[i] << endl;
+	}
+
+	cout << "----------------------------------------------------------------------\n";
+
+	string *p = chemicals;
+	cout << p << endl;
+	cout << ++p << endl;
+	cout << ++p << endl;
+	cout << --p << endl;
+
+	cout << p + 2 << endl;
+
 }
 

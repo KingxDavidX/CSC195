@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <list>
+#include <map>
 
 using namespace std;
 
@@ -50,7 +52,25 @@ int main()
 
 	// containers
 
-	list<string> cars = { "Hy" };
+	list<string> cars = { "Hyundai", "Ferrari", "Mercedes", "Volvo" };
+	cout << cars.front() << endl;
+	cout << cars.back() << endl;
+
+	cars.pop_back();
+	cout << cars.back() << endl;
+	
+	cars.push_front("Corvette");
+	cout << cars.front() << endl;
+
+	map<string, int> pet = { {"Dogs", 23}, {"chemicals", 3}, {"Turtle", 43} };
+
+	pet["Dogs"] = 50;
+
+	cout << pet["Dogs"] << endl;
+
+	pet["Spiders"] = 2;
+
+	cout << pet.empty() << endl;
 
 }
 

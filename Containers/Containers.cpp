@@ -33,9 +33,30 @@ int main()
 	cout << chemicals << "\n";	//returns address of first element in the array
 	cout << &chemicals[0] << "\n";
 
-	for (int i = 0; i < (*chemicals).size(); ++i)
+	int numb[2] = { 1,2 };
+	cout << numb << endl;
+	cout << sizeof(numb) << endl;
+	cout << (*chemicals).size() << endl;
+
+	cout << "----------------------------------------------------------------------\n";
+	cout << "----------------------------------------------------------------------\n";
+
+	cout << sizeof(chemicals) << endl;
+	cout << sizeof(chemicals[0]) << endl;
+	
+	//manually calculate if using for iterating or just use for each loops
+	int size = sizeof(chemicals) / sizeof(chemicals[0]);
+
+	//for loop
+	for (int i = 0; i < size; i++)
 	{
 		cout << &chemicals[i] << endl;
+	}
+
+	//for each loop
+	for (string chemical : chemicals)
+	{
+		cout << chemical << endl;
 	}
 
 	cout << "----------------------------------------------------------------------\n";

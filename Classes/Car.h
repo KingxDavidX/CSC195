@@ -1,19 +1,19 @@
 #pragma once
 #include "Vehicle.h"
 
-class Motorcycle: public Vehicle
+class Car: public Vehicle
 {
 public:
-	Motorcycle()
+	Car()
 	{
-		engineCC = 0;
+		numOfDoors = 0;
 	}
 
 	void Read(std::ostream& ostream, std::istream& istream) override;
 	void Write(std::ostream& ostream) override;
 
-	eType getType() override { return eType::MOTORCYCLE; }
-	int getEngineCC() { return engineCC; }
+	eType getType() override { return eType::CAR; }
+	int getNumOfDoors() { return numOfDoors; }
 protected:
-	int engineCC;
+	int numOfDoors;
 };

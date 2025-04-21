@@ -21,6 +21,7 @@ public:
 	virtual void Write(std::ostream& ostream);
 
 	virtual eType getType() = 0;
+	std::string getBrand() { return brand; }
 protected:
 	std::string brand;
 	int year;

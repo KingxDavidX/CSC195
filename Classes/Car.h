@@ -13,7 +13,6 @@ public:
 	void Write(std::ostream& ostream) override;
 
 	eType getType() override { return eType::CAR; }
-	int getNumOfDoors() { return numOfDoors; }
 protected:
 	int numOfDoors;
 };

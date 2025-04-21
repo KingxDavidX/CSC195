@@ -4,7 +4,7 @@
 class Car: public Vehicle
 {
 public:
-	Car(): Vehicle()
+	Car()
 	{
 		numOfDoors = 0;
 	}
@@ -13,7 +13,6 @@ public:
 	void Write(std::ostream& ostream) override;
 
 	eType getType() override { return eType::CAR; }
-	int getNumOfDoors() { return numOfDoors; }
 protected:
 	int numOfDoors;
 };

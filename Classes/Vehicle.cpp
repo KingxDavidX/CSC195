@@ -14,7 +14,7 @@ void Vehicle::Write(std::ostream& ostream)
 {
 	ostream << "\nMotorcycle Information:\n";
 	ostream << "------------------------\n";
-	ostream << "Brand: " << getBrand << "\n";
-	ostream << "Year: " << getYear << "\n";
+	ostream << "Brand: " << brand << "\n";
+	ostream << "Year: " << year << "\n";
 }
 

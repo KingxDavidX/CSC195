@@ -13,7 +13,6 @@ public:
 	void Write(std::ostream& ostream) override;
 
 	eType getType() override { return eType::MOTORCYCLE; }
-	int getEngineCC() { return engineCC; }
 protected:
 	int engineCC;
 };

@@ -11,6 +11,6 @@ void Car::Read(std::ostream& ostream, std::istream& istream)
 void Car::Write(std::ostream& ostream)
 {
 	Vehicle::Write(ostream);
-	ostream << "Amount of doors: " << getNumOfDoors << "\n";
+	ostream << "Amount of doors: " << numOfDoors << "\n";
 }
 

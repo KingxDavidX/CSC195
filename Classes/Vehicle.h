@@ -20,8 +20,6 @@ public:
 	virtual void Read(std::ostream& ostream, std::istream& istream);
 	virtual void Write(std::ostream& ostream);
 
-	int getYear() { return year; }
-	std::string getBrand() { return brand; }
 	virtual eType getType() = 0;
 protected:
 	std::string brand;

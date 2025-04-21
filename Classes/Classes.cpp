@@ -47,7 +47,6 @@ int main()
         case 5:
             quit = true;
             break;
-        case default: break;
         }
     }
 }

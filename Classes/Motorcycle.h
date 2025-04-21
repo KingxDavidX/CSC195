@@ -4,9 +4,9 @@
 class Motorcycle: public Vehicle
 {
 public:
-	Motorcycle(): Vehicle(0, "Default")
+	Motorcycle(): Vehicle()
 	{
-		setEngineCC(0);
+		engineCC = 0;
 	}
 
 	void Read(std::ostream& ostream, std::istream& istream) override;
@@ -16,6 +16,4 @@ public:
 	int getEngineCC() { return engineCC; }
 protected:
 	int engineCC;
-
-	void setEngineCC(int amount) { engineCC = amount; }
 };

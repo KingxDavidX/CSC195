@@ -1,15 +1,16 @@
 #include "Motorcycle.h"
+#include <iostream>
 
 void Motorcycle::Read(std::ostream& ostream, std::istream& istream)
 {
 	Vehicle::Read(ostream, istream);
-	int ccInput;
 
 	ostream << "enter CC: ";
-
+	istream >> engineCC;
 }
 void Motorcycle::Write(std::ostream& ostream)
 {
-	
+	Vehicle::Write(ostream);
+	ostream << "Engine CC: " << getEngineCC << "\n";
 }
 

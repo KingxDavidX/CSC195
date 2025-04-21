@@ -4,9 +4,9 @@
 class Car: public Vehicle
 {
 public:
-	Car(): Vehicle(0, "default")
+	Car(): Vehicle()
 	{
-		setNumOfDoors(0);
+		numOfDoors = 0;
 	}
 
 	void Read(std::ostream& ostream, std::istream& istream) override;
@@ -16,6 +16,4 @@ public:
 	int getNumOfDoors() { return numOfDoors; }
 protected:
 	int numOfDoors;
-
-	void setNumOfDoors(int amount) { numOfDoors = amount; }
 };

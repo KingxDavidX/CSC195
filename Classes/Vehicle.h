@@ -11,10 +11,10 @@ public:
 		MOTORCYCLE
 	};
 
-	Vehicle(int year, std::string vehicleBrand)
+	Vehicle()
 	{
-		setYear(year);
-		setBrand(vehicleBrand);
+		year = 0;
+		brand = "unassigned";
 	}
 
 	virtual void Read(std::ostream& ostream, std::istream& istream);
@@ -26,9 +26,6 @@ public:
 protected:
 	std::string brand;
 	int year;
-
-	void setYear(int amount) { year = amount; }
-	void setBrand(std::string brandName) { brand = brandName; }
 };
 
 

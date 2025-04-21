@@ -4,6 +4,6 @@
 
 int main()
 {
-    Motorcycle().Read(std::cout, std::cin);
+    
 }
 

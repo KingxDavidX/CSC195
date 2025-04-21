@@ -1,11 +1,21 @@
 #pragma once
-#include <string>
+#include "Vehicle.h"
 
-class Car
+class Car: public Vehicle
 {
 public:
+	Car(): Vehicle(0, "default")
+	{
+		setNumOfDoors(0);
+	}
 
+	void Read(std::ostream& ostream, std::istream& istream) override;
+	void Write(std::ostream& ostream) override;
+
+	eType getType() override { return eType::CAR; }
+	int getNumOfDoors() { return numOfDoors; }
 protected:
 	int numOfDoors;
-	std::string fuelType;
+
+	void setNumOfDoors(int amount) { numOfDoors = amount; }
 };

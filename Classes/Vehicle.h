@@ -5,19 +5,30 @@
 class Vehicle
 {
 public:
-	Animal(int year,std::string brand)
+	enum class eType
 	{
-		setSpeed(0);
+		CAR,
+		MOTORCYCLE
+	};
+
+	Vehicle(int year, std::string vehicleBrand)
+	{
 		setYear(year);
-		setBrand(brand);
+		setBrand(vehicleBrand);
 	}
-	virtual void drive() = 0;
-	virtual std::string displayInfo() = 0;
+
+	virtual void Read(std::ostream& ostream, std::istream& istream);
+	virtual void Write(std::ostream& ostream);
+
+	int getYear() { return year; }
+	std::string getBrand() { return brand; }
+	virtual eType getType() = 0;
 protected:
 	std::string brand;
-	int speed;
 	int year;
-	void setSpeed(int amount) { speed = amount; }
+
 	void setYear(int amount) { year = amount; }
 	void setBrand(std::string brandName) { brand = brandName; }
 };
+
+

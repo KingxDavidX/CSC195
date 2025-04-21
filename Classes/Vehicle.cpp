@@ -12,7 +12,7 @@ void Vehicle::Read(std::ostream& ostream, std::istream& istream)
 
 void Vehicle::Write(std::ostream& ostream)
 {
-	ostream << "\nMotorcycle Information:\n";
+	ostream << "\nVehicle Information:\n";
 	ostream << "------------------------\n";
 	ostream << "Brand: " << brand << "\n";
 	ostream << "Year: " << year << "\n";

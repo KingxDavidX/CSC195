@@ -19,6 +19,7 @@ void Database::Create(Vehicle::eType type)
 	}
 	vehicle->Read(std::cout, std::cin);
 	vehicle->Write(std::cout);
+	vehicles.push_back(vehicle);
 }
 void Database::Display(Vehicle::eType type)
 {

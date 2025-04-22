@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OOP", "..\OOP\OOP.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes", "..\Classes\Classes.vcxproj", "{E402CD67-878F-495B-AD49-014141008268}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Steams", "..\Steams\Steams.vcxproj", "{D3788440-62F8-4C71-B055-06AF1F2C252F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{E402CD67-878F-495B-AD49-014141008268}.Release|x64.Build.0 = Release|x64
 		{E402CD67-878F-495B-AD49-014141008268}.Release|x86.ActiveCfg = Release|Win32
 		{E402CD67-878F-495B-AD49-014141008268}.Release|x86.Build.0 = Release|Win32
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Debug|x64.ActiveCfg = Debug|x64
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Debug|x64.Build.0 = Debug|x64
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Debug|x86.ActiveCfg = Debug|Win32
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Debug|x86.Build.0 = Debug|Win32
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Release|x64.ActiveCfg = Release|x64
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Release|x64.Build.0 = Release|x64
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Release|x86.ActiveCfg = Release|Win32
+		{D3788440-62F8-4C71-B055-06AF1F2C252F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

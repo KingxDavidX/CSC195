@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Users\davia\Desktop\Fail.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Fail.cpp" />
     <ClCompile Include="Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>

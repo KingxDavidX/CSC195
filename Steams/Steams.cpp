@@ -6,13 +6,13 @@
 using namespace std;
 
 
-//reasons to pas by reference
+//reasons to pass by reference
 //for classes like ostrea\isream, cannot create copies, so pass by reference
 //Ensure manipulation of  variables inside the main method
 //Avoid creating copies for large datatypes (resource/time efficient)
 //Rule of thumb: Use pass-by-reference whenever possible
 //Exception: Cannot point to nothing, so if parameter needs to point to a null value, in that case use a pointer
-void Write(string& text, ostream& ostream)
+void Write(const string& text, ostream& ostream)
 {
 	//text = "Ha!"; - avoid manipulation of values passed as parameters
 	ostream << text << endl;
@@ -26,14 +26,16 @@ void Write(const vector<int>& numbers, ofstream& ostream)
 	}
 }
 
-void Read(vector<int> numbers, istream& istream)
+void Read(vector<int>& numbers, istream& istream)
 {
 	while (!istream.eof())
 	{
 		int n;
 		istream >> n;
-
-		numbers.push_back(n);
+		if (!istream.fail())
+		{
+			numbers.push_back(n);
+		}
 	}
 }
 
@@ -60,8 +62,8 @@ int main()
 	int i = 5;
 	output << i << endl;
 	output.close();
+
 	text = "";
-	
 	//input from file
 	ifstream input("data.txt");
 	getline(input, text);
@@ -79,10 +81,10 @@ int main()
 	//store vector to file
 	output.open("numbers.txt");
 	Write(numbers, output);
-
 	output.close();
 
-	numbers.clear;
+	numbers.clear();
+
 	//read from vector file
 	input.open("numbers.txt");
 	Read(numbers, input);

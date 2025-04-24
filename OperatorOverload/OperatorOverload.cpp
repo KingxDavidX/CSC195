@@ -16,6 +16,11 @@ using namespace std;
 //	return point;
 //}
 
+//void operator << (ostream& ostream, Point& point)
+//{
+//	ostream << point.x << " : " << point.y << endl;
+//}
+
 int main()
 {
 	Point point1(10,14);
@@ -27,6 +32,7 @@ int main()
 	//point1.Add(point2); --- intead of method call
 	Point point3 = (point1 + point2) * 3.0f;	//syntactical sugar, gives operator
 
-	point3.Write(cout);
+	//point3.Write(cout);
+	cout << point3 << point2;
 
 }

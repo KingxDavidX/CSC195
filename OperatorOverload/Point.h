@@ -14,7 +14,9 @@ namespace ost
 		//Point() { x = 0; y = 0; } // traditional way
 		Point() : x{ 0 }, y{ 0 } {} //modern way
 		Point(float x, float y) : x{x}, y{y} {}
+
 		void Write(std::ostream& ostream);
+		friend std::ostream& operator << (std::ostream& ostream, Point& point);
 
 		void Add(Point& point);
 

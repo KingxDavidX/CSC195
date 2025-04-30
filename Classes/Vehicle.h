@@ -22,6 +22,9 @@ public:
 	virtual void Read(std::ifstream& istream);
 	virtual void Write(std::ofstream& ostream);
 
+	friend std::istream& operator >> (std::istream& istream, Vehicle& vehicle);
+	friend std::ostream& operator << (std::ostream& ostream, Vehicle& vehicle);
+
 	virtual eType getType() = 0;
 	std::string getBrand() { return brand; }
 protected:

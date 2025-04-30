@@ -14,3 +14,13 @@ void Motorcycle::Write(std::ostream& ostream)
 	ostream << "Engine CC: " << engineCC << "\n";
 }
 
+void Motorcycle::Read(std::ifstream& istream)
+{
+	
+}
+
+void Motorcycle::Write(std::ofstream& ostream)
+{
+	
+}
+

@@ -20,11 +20,11 @@ void Database::Create(Vehicle::eType type)
 	}
 	std::cin >> *vehicle;
 	std::cout << *vehicle;
-	vehicles.push_back(vehicle);
+	vehicles.push_back(std::unique_ptr<Vehicle>{vehicle});
 }
 void Database::Display(Vehicle::eType type)
 {
-	for (Vehicle* vehicle: vehicles)
+	for (auto& vehicle: vehicles)
 	{
 		if (vehicle->getType() == type)
 		{
@@ -32,9 +32,26 @@ void Database::Display(Vehicle::eType type)
 		}
 	}
 }
+
+std::unique_ptr<Vehicle> Database::Create(int t)
+{
+	Vehicle* vehicle = nullptr;
+	Vehicle::eType type = static_cast<Vehicle::eType>(t);
+	switch (type)
+	{
+	case Vehicle::eType::CAR:
+		vehicle = new Car;
+		break;
+	case Vehicle::eType::MOTORCYCLE:
+		vehicle = new Motorcycle;
+		break;
+	}
+	return std::unique_ptr<Vehicle>{vehicle};
+}
+
 void Database::Display(const std::string& name)
 {
-	for (Vehicle* vehicle : vehicles)
+	for (auto& vehicle : vehicles)
 	{
 		if (vehicle->getBrand() == name)
 		{
@@ -44,7 +61,7 @@ void Database::Display(const std::string& name)
 }
 void Database::DisplayAll()
 {
-	for (Vehicle* vehicle: vehicles)
+	for (auto& vehicle: vehicles)
 	{
 		std::cout << *vehicle;
 	}
@@ -60,16 +77,23 @@ void Database::Load(const std::string& filename)
 			{
 				int type;
 				input >> type;
-				Vehicle* vehicle = Create(static_cast<Vehicle::eType>(type));
+				std::unique_ptr<Vehicle> vehicle = Create(type);
 				vehicle->Read(input);
 				vehicles.push_back(vehicle);
-				
 			}
 	}
 }
 
 void Database::Save(const std::string& filename)
 {
-	
+	std::ofstream output(filename);
+	if (output.is_open())
+	{
+		for (auto& vehicle: vehicles)
+		{
+			static_cast<int>(vehicle->getType());
+			vehicle->Write(output);
+		}
+	}
 }
 

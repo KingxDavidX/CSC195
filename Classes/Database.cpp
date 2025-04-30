@@ -79,7 +79,7 @@ void Database::Load(const std::string& filename)
 				input >> type;
 				std::unique_ptr<Vehicle> vehicle = Create(type);
 				vehicle->Read(input);
-				vehicles.push_back(vehicle);
+				vehicles.push_back(std::move(vehicle));
 			}
 	}
 }

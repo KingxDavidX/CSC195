@@ -18,3 +18,14 @@ void Vehicle::Write(std::ostream& ostream)
 	ostream << "Year: " << year << "\n";
 }
 
+void Vehicle::Read(std::ifstream& istream)
+{
+	istream >> brand;
+	istream >> year;
+}
+
+void Vehicle::Write(std::ofstream& ostream)
+{
+	ostream << "Brand: " << brand << "\n";
+	ostream << "Year: " << year << "\n";
+}

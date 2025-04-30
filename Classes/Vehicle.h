@@ -19,6 +19,8 @@ public:
 
 	virtual void Read(std::ostream& ostream, std::istream& istream);
 	virtual void Write(std::ostream& ostream);
+	virtual void Read(std::ifstream& istream);
+	virtual void Write(std::ofstream& ostream);
 
 	virtual eType getType() = 0;
 	std::string getBrand() { return brand; }

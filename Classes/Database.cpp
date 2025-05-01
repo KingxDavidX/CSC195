@@ -67,6 +67,7 @@ void Database::DisplayAll()
 	}
 }
 
+
 void Database::Load(const std::string& filename)
 {
 	std::ifstream input(filename);
@@ -91,7 +92,7 @@ void Database::Save(const std::string& filename)
 	{
 		for (auto& vehicle: vehicles)
 		{
-			static_cast<int>(vehicle->getType());
+			output << static_cast<int>(vehicle->getType()) << std::endl;
 			vehicle->Write(output);
 		}
 	}

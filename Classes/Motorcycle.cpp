@@ -24,6 +24,6 @@ void Motorcycle::Read(std::ifstream& istream)
 void Motorcycle::Write(std::ofstream& ostream)
 {
 	Vehicle::Write(ostream);
-	ostream << "Engine CC: " << engineCC << "\n";
+	ostream << engineCC << std::endl;
 }
 

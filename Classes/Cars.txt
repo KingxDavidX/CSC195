@@ -1,0 +1,3 @@
+Brand: Toyota
+Year: 2023
+Amount of doors: 2

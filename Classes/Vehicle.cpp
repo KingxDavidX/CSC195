@@ -27,8 +27,8 @@ void Vehicle::Read(std::ifstream& istream)
 
 void Vehicle::Write(std::ofstream& ostream)
 {
-	ostream << "Brand: " << brand << "\n";
-	ostream << "Year: " << year << "\n";
+	ostream << brand << std::endl;
+	ostream << year << std::endl;
 }
 
 std::istream& operator>>(std::istream& istream, Vehicle& vehicle)
